@@ -1,0 +1,5 @@
+pyspark[ml,sql]~=3.5
+jupyter~=1.0
+mypy
+black
+flake8
