@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.mypy_cache/
+.DS_Store
+logs/
+
+# Warehouse
+# --> local data for spark environment filesystem
+warehouse/**/*
+!warehouse/.gitkeep
+
+# data
+# --> minio / s3 data backend file system
+data/**/*
+!data/.gitkeep
+
+# notebooks
+notebooks/**/*
+!notebooks/.gitkeep

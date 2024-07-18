@@ -35,9 +35,9 @@ environment: .venv/bin/python
 logs/docker-compose.log:
 	# make log directory if not exists
 	mkdir -p logs
-	docker-compose up -d
+	docker compose up -d
 	# pipe docker compose logs to file
-	docker-compose logs -f > logs/docker-compose.log 2>&1 &
+	docker compose logs -f > logs/docker-compose.log 2>&1 &
 
 
 start: logs/docker-compose.log environment
@@ -46,7 +46,7 @@ start: logs/docker-compose.log environment
 
 
 stop: 
-	docker-compose down
+	docker compose down
 	rm -rf logs/
 
 
@@ -67,5 +67,5 @@ clean: stop
 
 deepclean: clean
 	# delete all docker images from the docker compose
-	docker-compose down --rmi all
+	docker compose down --rmi all
 
